@@ -6,6 +6,8 @@ Repositório dedicado aos projetos realizados na aula de linguagem de programaç
 
 * Obs: Projetos realizados de acordo com o tema da aula.
 
+- Estágio atual: Atualmente estamos trabalhando com classes em PHP.
+
 ### 🧰 Tecnologias Utilizadas:
 
 <div align="left">
