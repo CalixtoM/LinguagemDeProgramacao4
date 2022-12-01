@@ -1,6 +1,14 @@
 <?php 
     session_start();
-    $nomeUsuario = $_SESSION['nome'];
+	// Caso a sessão esteja preenchida o valor é passado para a variavel $nomeUsuario
+	if(isset($_SESSION['nome'])){
+		$nomeUsuario = $_SESSION['nome'];
+	}
+	// Se não estiver preenchida, a variavel se torna do tipo *String*
+	else{
+		$nomeUsuario = "Visitante";
+	}
+    
     include('inc/functions.php');
     include('inc/conecta.php');
 ?>
@@ -29,6 +37,7 @@
 <body>
 
 	<ul class="nav justify-content-center" style="background-color: black;" id="frete">
+		<!-- O Nav Item é exibido mostrando o valor presente na variavel $nomeUsuario-->
 		<?php echo '<li class="nav-item" style="color: white; ">Olá '.$nomeUsuario.', Você ganhou R$ 10,00 de desconto em frete</li>' ?>
 	</ul>
 
@@ -68,32 +77,6 @@
                 buscaProd($mysqli);
             
             ?>
-			<!--<div class="col-sm-3" id="itens">
-				<img src="img/tenis/1.png" class="img-thumbnail" alt="...">
-			</div>
-			<div class="col-sm-3" id="itens">
-				<img src="img/tenis/2.png" class="img-thumbnail" alt="...">
-			</div>
-			<div class="col-sm-3" id="itens">
-				<img src="img/tenis/3.png" class="img-thumbnail" alt="...">
-			</div>
-			<div class="col-sm-3" id="itens">
-				<img src="img/tenis/4.png" class="img-thumbnail" alt="...">
-			</div>
-		</div>
-		<div class="row" style="margin-top: 10px; margin-bottom: 100px;">
-			<div class="col-sm-3" id="itens">
-				<img src="img/tenis/5.png" class="img-thumbnail" alt="...">
-			</div>
-			<div class="col-sm-3" id="itens">
-				<img src="img/tenis/6.png" class="img-thumbnail" alt="...">
-			</div>
-			<div class="col-sm-3" id="itens">
-				<img src="img/tenis/7.png" class="img-thumbnail" alt="...">
-			</div>
-			<div class="col-sm-3" id="itens">
-				<img src="img/tenis/8.png" class="img-thumbnail" alt="...">
-			</div> -->
 		</div>
 	</div>
 

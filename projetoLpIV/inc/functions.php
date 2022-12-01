@@ -18,15 +18,24 @@ function buscaProd($mysqli){
     }
 }
 
+// Criação da classe produto, que armazena as informações do produto que vem do banco
 Class Produto{
     public $nome;
     public $imagem;
     public $valor;
 
     public function nomeProduto(){
-        return $this->nome . ' ' . $this->imagem . ' ' . $this->valor;
+        return $this->nome;
 
 
+    }
+
+    public function valorProduto(){
+        return $this->valor;
+    }
+
+    public function imagemProduto(){
+        echo '<img style="border-color: black; border: 3px solid black;" class="rounded float-left" src="'.$this->imagem.'">';
     }
 }
 
