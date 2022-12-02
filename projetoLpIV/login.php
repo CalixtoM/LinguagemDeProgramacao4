@@ -4,7 +4,7 @@ include('inc/conecta.php');
 
 if(isset($_POST['em'], $_POST['pw'])) {
 
-    $_SESSION['nome'] = "Usuário";
+    $_SESSION['nome'] = $_POST['em'];
     echo "<script>location.href='index.php';</script>";
 
 
@@ -47,8 +47,8 @@ if(isset($_POST['em'], $_POST['pw'])) {
     <div class="container">
       <form class="form-signin" method="post">
         <h1 class="h3 mb-3 font-weight-normal">Faça login</h1>
-        <label for="inputEmail" class="sr-only">Endereço de email</label>
-        <input type="email" id="inputEmail" name="em" class="form-control" placeholder="Seu email" required="" autofocus=""><br>
+        <label for="inputEmail" class="sr-only">Endereço de email Ou Usuário</label>
+        <input type="text" id="inputEmail" name="em" class="form-control" placeholder="Seu email" required="" autofocus=""><br>
         <label for="inputPassword" class="sr-only">Senha</label>
         <input type="password" name="pw" id="inputPassword" class="form-control" placeholder="Senha" required="">
         <a href="registro.php" id="r"><p>Registre-se</p></a>

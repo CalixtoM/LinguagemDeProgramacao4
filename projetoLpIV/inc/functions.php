@@ -35,7 +35,7 @@ Class Produto{
     }
 
     public function imagemProduto(){
-        echo '<img style="border-color: black; border: 3px solid black;" class="rounded float-left" src="'.$this->imagem.'">';
+        echo '<img style="border-color: black; border: 3px solid black; background-color: #EBE9EA;" class="img-thumbnail rounded float-left" src="'.$this->imagem.'">';
     }
 }
 
